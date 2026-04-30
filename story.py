@@ -33,7 +33,7 @@ STORY_STATES = {
             ("Open Door Two", "door_two"),
             ("Open Door Three", "door_three"),
         ],
-        "bg": "images/entry_hall.png",
+        "bg": "images/pickthreedoors.png",
     },
     "door_one": {
         "text": (
@@ -41,7 +41,7 @@ STORY_STATES = {
             "and you finally see the bottom of the pit."
         ),
         "options": [("Restart", "start")],
-        "bg": "images/pit.png",
+        "bg": "images/opendoorone.png",
     },
     "door_two": {
         "text": (
@@ -49,7 +49,7 @@ STORY_STATES = {
             "Hours or days pass before you finally succumb to your fate."
         ),
         "options": [("Restart", "start")],
-        "bg": "images/trapped_room.png",
+        "bg": "images/Closingdoor.png",
     },
     "door_three": {
         "text": (
@@ -60,7 +60,7 @@ STORY_STATES = {
             ("Pull Lever One", "lever_one"),
             ("Pull Lever Two", "lever_two"),
         ],
-        "bg": "images/levers.png",
+        "bg": "images/threelevers.png",
     },
     "lever_one": {
         "text": (
@@ -68,7 +68,7 @@ STORY_STATES = {
             "the sun is rising and dew glitters on the grass. You run to safety and see the light of a new day."
         ),
         "options": [("Restart", "start")],
-        "bg": "images/sunrise.png",
+        "bg": "images/escapetovictory.png",
     },
     "lever_two": {
         "text": (
@@ -76,7 +76,7 @@ STORY_STATES = {
             "This is a deadly ending you can only escape by restarting and choosing differently."
         ),
         "options": [("Restart", "start")],
-        "bg": "images/bat_trap.png",
+        "bg": "images/battothehead.png",
     },
 }
 

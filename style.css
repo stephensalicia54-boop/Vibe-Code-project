@@ -48,6 +48,8 @@ body {
   content: '';
   position: absolute;
   inset: 0;
+  background-image: var(--bg-image, none);
+  background-color: var(--bg-color, #1b1b26);
   background-size: cover;
   background-position: center;
   filter: brightness(0.55) saturate(1.1);
@@ -63,6 +65,10 @@ body {
   justify-content: center;
   padding: 40px;
   text-align: center;
+  background-image: url('Untitled design.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .story-text {
@@ -70,6 +76,10 @@ body {
   font-size: clamp(1.05rem, 1.5vw, 1.4rem);
   line-height: 1.8;
   max-width: 860px;
+  padding: 34px 36px;
+  border-radius: 28px;
+  background: rgba(10, 10, 16, 0.78);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
 .choices-panel {

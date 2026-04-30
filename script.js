@@ -3,7 +3,7 @@ const STORY_STATES = {
     text: `Greetings stranger. It seems you have stumbled upon an old haunted house. You have two options here: walk away from the house and the haunting feeling it gives you, or enter the old abandoned house and discover why curiosity killed the cat.`,
     options: [
       { label: 'Walk away', next: 'walk_away' },
-      { label: 'Enter the house', next: 'enter_house' },
+      { label: 'Enter The House', next: 'enter_house' },
     ],
     bgColor: '#2a2434',
     bgImage: 'images/haunted_house.png',
@@ -62,13 +62,14 @@ const STORY_STATES = {
 const storyText = document.getElementById('storyText');
 const choicesPanel = document.getElementById('choicesPanel');
 const storyPanel = document.getElementById('storyPanel');
+const storyOverlay = document.querySelector('.story-overlay');
 let currentState = 'start';
 
 function setScene(state) {
   const stateData = STORY_STATES[state];
   storyText.textContent = stateData.text;
   renderOptions(stateData.options);
-  updateBackground(stateData);
+  updateBackground(stateData, state);
 }
 
 function renderOptions(options) {
@@ -85,15 +86,17 @@ function renderOptions(options) {
   });
 }
 
-function updateBackground(stateData) {
+function updateBackground(stateData, state) {
   const bgImage = stateData.bgImage || '';
   const safeUrl = `url('${bgImage}')`;
   storyPanel.style.setProperty('--bg-color', stateData.bgColor);
   storyPanel.style.setProperty('--bg-image', bgImage ? safeUrl : 'none');
-  storyPanel.style.backgroundColor = stateData.bgColor;
-  storyPanel.style.backgroundImage = bgImage ? safeUrl : 'none';
-  storyPanel.style.backgroundSize = 'cover';
-  storyPanel.style.backgroundPosition = 'center';
+
+  if (state === 'enter_house') {
+    storyOverlay.style.backgroundImage = "url('pickthreedoors.png')";
+  } else {
+    storyOverlay.style.backgroundImage = "url('Untitled design.png')";
+  }
 }
 
 setScene(currentState);
