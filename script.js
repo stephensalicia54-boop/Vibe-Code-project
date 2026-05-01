@@ -94,6 +94,18 @@ function updateBackground(stateData, state) {
 
   if (state === 'enter_house') {
     storyOverlay.style.backgroundImage = "url('pickthreedoors.png')";
+  } else if (state === 'door_one') {
+    storyOverlay.style.backgroundImage = "url('opendoorone.png')";
+  } else if (state === 'door_two') {
+    storyOverlay.style.backgroundImage = "url('Closingdoor.png')";
+  } else if (state === 'door_three') {
+    storyOverlay.style.backgroundImage = "url('threelevers.png')";
+  } else if (state === 'lever_one') {
+    storyOverlay.style.backgroundImage = "url('escapetovictory.png')";
+  } else if (state === 'lever_two') {
+    storyOverlay.style.backgroundImage = "url('battothehead.png')";
+  } else if (state === 'walk_away') {
+    storyOverlay.style.backgroundImage = "url('ScardeyCat (2).png')";
   } else {
     storyOverlay.style.backgroundImage = "url('Untitled design.png')";
   }
